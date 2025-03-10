@@ -226,26 +226,23 @@
   window.addEventListener('load', navmenuScrollspy);
   document.addEventListener('scroll', navmenuScrollspy);
 
-  // Contact form handling
+  /**
+   * Contact form handling
+   */
   document.addEventListener('DOMContentLoaded', function() {
     const contactForm = document.querySelector('.contact-form');
     if (contactForm) {
       contactForm.addEventListener('submit', function(e) {
-        const loadingDiv = this.querySelector('.loading');
-        const errorDiv = this.querySelector('.error-message');
-        const successDiv = this.querySelector('.sent-message');
+        const loadingMessage = this.querySelector('.loading');
+        const errorMessage = this.querySelector('.error-message');
+        const sentMessage = this.querySelector('.sent-message');
         
-        // Show loading
-        loadingDiv.style.display = 'block';
-        errorDiv.style.display = 'none';
-        successDiv.style.display = 'none';
+        // Show loading message
+        loadingMessage.style.display = 'block';
+        errorMessage.style.display = 'none';
+        sentMessage.style.display = 'none';
         
-        // FormSubmit.co will handle the actual submission
-        // We just need to handle the UI feedback
-        setTimeout(() => {
-          loadingDiv.style.display = 'none';
-          successDiv.style.display = 'block';
-        }, 2000);
+        // FormSubmit.co will handle the actual submission and redirect
       });
     }
   });

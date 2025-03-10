@@ -755,9 +755,11 @@ referrerpolicy="no-referrer-when-downgrade">
               <!-- Disable Captcha -->
               <input type="hidden" name="_captcha" value="false">
               <!-- Success Page -->
-              <input type="hidden" name="_next" value="https://shittumuhammadmukhtar.vercel.app/thanks.html">
+              <input type="hidden" name="_next" value="https://i-portfolio-9b0r73o9w-mukhtar-shittus-projects.vercel.app/thanks.html">
               <!-- Template -->
               <input type="hidden" name="_template" value="table">
+              <!-- Subject -->
+              <input type="hidden" name="_subject" value="New Contact Form Submission">
               
               <div class="row gy-4">
 
@@ -782,11 +784,11 @@ referrerpolicy="no-referrer-when-downgrade">
                 </div>
 
                 <div class="col-md-12 text-center">
-                  <div class="loading">Loading</div>
-                  <div class="error-message"></div>
-                  <div class="sent-message">Your message has been sent. Thank you!</div>
+                  <div class="loading" style="display: none;">Loading...</div>
+                  <div class="error-message" style="display: none; color: #dc3545;">Could not send message.</div>
+                  <div class="sent-message" style="display: none; color: #198754;">Your message has been sent. Thank you!</div>
 
-                  <button type="submit">Send Message</button>
+                  <button type="submit" class="btn btn-primary">Send Message</button>
                 </div>
 
               </div>
